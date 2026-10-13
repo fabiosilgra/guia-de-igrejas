@@ -1,0 +1,86 @@
+:root{
+  --azul:#1f3a5f; --azul2:#2d5486; --dourado:#c99a2e; --fundo:#f5f3ee; --card:#fff;
+  --texto:#222; --suave:#666; --borda:#e3dfd6; --raio:12px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.5}
+a{color:var(--azul2)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+
+.header{background:var(--azul);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;flex-wrap:wrap;gap:8px}
+.header a{color:#fff;text-decoration:none}
+.logo{font-weight:700;font-size:1.2rem}
+.cruz{color:var(--dourado)}
+.header nav a{margin-left:16px;font-size:.95rem;opacity:.9}
+.header nav a:hover{opacity:1;text-decoration:underline}
+
+.hero{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;text-align:center;padding:40px 16px}
+.hero h1{margin:0 0 8px;font-size:clamp(1.5rem,4vw,2.2rem)}
+.hero p{margin:0;opacity:.9}
+.hero.pequeno{text-align:left;padding:22px 0}
+.hero.pequeno .migalha,.hero.pequeno .migalha a{color:#dbe6f5}
+
+.migalha{font-size:.9rem;color:var(--suave);margin:16px 0}
+
+.macro{margin:28px 0 10px;color:var(--azul);border-left:4px solid var(--dourado);padding-left:10px;font-size:1.15rem}
+.grid-estados{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.card-estado{background:var(--card);border:1px solid var(--borda);border-radius:var(--raio);padding:14px;text-decoration:none;color:var(--texto);display:flex;flex-direction:column;gap:2px;transition:.15s}
+.card-estado:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1);border-color:var(--dourado)}
+.card-estado .uf{font-weight:800;font-size:1.4rem;color:var(--azul)}
+.card-estado small{color:var(--suave)}
+
+.filtros{display:flex;gap:10px;margin:18px 0 10px;flex-wrap:wrap}
+.filtros input,.filtros select{padding:12px;border:1px solid var(--borda);border-radius:10px;font-size:1rem;background:#fff;flex:1;min-width:200px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{border:1px solid var(--borda);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;font-size:.9rem}
+.chip:hover{border-color:var(--azul2)}
+.chip.ativo{background:var(--azul);color:#fff;border-color:var(--azul)}
+.contagem{color:var(--suave);font-size:.9rem;margin:14px 0 8px}
+
+.card-igreja{display:flex;gap:14px;background:var(--card);border:1px solid var(--borda);border-radius:var(--raio);padding:12px;margin-bottom:12px;text-decoration:none;color:var(--texto);transition:.15s}
+.card-igreja:hover{box-shadow:0 6px 16px rgba(0,0,0,.1);border-color:var(--azul2)}
+.card-igreja.destaque{border:2px solid var(--dourado);background:#fffaf0}
+.card-igreja .foto{width:96px;height:96px;flex:none;border-radius:10px;background:#e8edf5;display:flex;align-items:center;justify-content:center;font-size:2.4rem;overflow:hidden}
+.card-igreja .foto img{width:100%;height:100%;object-fit:cover}
+.card-igreja h3{margin:2px 0 4px;font-size:1.05rem;color:var(--azul)}
+.card-igreja p{margin:2px 0;font-size:.9rem}
+.card-igreja .dio{color:var(--suave)}
+.selo{background:var(--dourado);color:#fff;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;text-transform:uppercase}
+
+.banner{display:flex;align-items:center;justify-content:center;margin:14px auto;max-width:100%;text-decoration:none;overflow:hidden;border-radius:8px}
+.banner img{max-width:100%;height:auto;display:block}
+.banner.vazio{flex-direction:column;border:2px dashed #c9c3b4;background:#efece4;color:#8a8574;padding:14px;text-align:center}
+.banner.vazio span{font-weight:700}
+.banner-topo,.banner-lista,.banner-rodape{max-width:728px;min-height:90px}
+.banner-lateral{max-width:300px;min-height:250px;margin:0}
+
+.detalhe{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+.detalhe article{background:#fff;border:1px solid var(--borda);border-radius:var(--raio);padding:20px}
+.capa{height:200px;background:#e8edf5;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:4rem;overflow:hidden;margin-bottom:14px}
+.capa img{width:100%;height:100%;object-fit:cover}
+.detalhe h1{margin:0;color:var(--azul)}
+.detalhe h2{color:var(--azul);margin:24px 0 8px;font-size:1.1rem}
+.dio{color:var(--suave)}
+.dados{list-style:none;padding:0;margin:12px 0}
+.dados li{margin:6px 0}
+.acoes{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--azul);color:#fff;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:600;font-size:.95rem}
+.btn.sec{background:#25a244}
+.btn:hover{opacity:.9}
+.horarios{width:100%;border-collapse:collapse}
+.horarios th{text-align:left;padding:10px 8px;width:38%;border-bottom:1px solid var(--borda);vertical-align:top}
+.horarios td{padding:8px;border-bottom:1px solid var(--borda)}
+.hora{display:inline-block;background:#eef3fa;color:var(--azul);border-radius:8px;padding:4px 10px;margin:2px 4px 2px 0;font-weight:600}
+.aviso{font-size:.85rem;color:var(--suave);margin-top:20px}
+
+.vazio-msg{text-align:center;padding:40px 16px;color:var(--suave)}
+.footer{background:var(--azul);color:#dbe6f5;text-align:center;padding:24px 16px;margin-top:30px;font-size:.9rem}
+.footer a{color:#fff}
+.footer p{margin:4px 0}
+
+@media (max-width:760px){
+  .detalhe{grid-template-columns:1fr}
+  .banner-lateral{margin:0 auto}
+  .card-igreja .foto{width:76px;height:76px;font-size:2rem}
+  .header nav a{margin-left:0;margin-right:14px}
+}
